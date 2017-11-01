@@ -3,30 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>slide</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<section class="slide">
-		<nav class="title">
-			<a href="#" class="title-item">首页</a>
-			<a href="#" class="title-item">点击看看</a>
-			<a href="#" class="title-item">会自动的</a>
-			<a href="#" class="title-item">我的网站</a>
+	<!-- 效果图中并无链接跳转效果，故而未使用<a>标签 -->
+	<section class="slide" id="slide">
+		<!-- 切换项标题 -->
+		<nav class="title" id="title">
+			<span class="title-item current">首页</span>
+			<span class="title-item">点击看看</span>
+			<span class="title-item">会自动的</span>
+			<span class="title-item">我的网站</span>
 		</nav>
-		<hgroup class="picture">
-			<a href="#">
-				<img src="img/1.jpg" alt="">
-			</a>
-			<a href="#">
-				<img src="img/2.jpg" alt="">
-			</a>
-			<a href="#">
-				<img src="img/3.jpg" alt="">
-			</a>
-			<a href="#">
-				<img src="img/4.jpg" alt="">
-			</a>
+		<!-- 切换项内容 -->
+		<hgroup class="picture" id="picture">
+			<img src="img/1.jpg" alt="">
+			<img src="img/2.jpg" alt="">
+			<img src="img/3.jpg" alt="">
+			<img src="img/4.jpg" alt="">
 		</hgroup>
 	</section>
+	<script src="js/script.js"></script>
 </body>
 </html>
