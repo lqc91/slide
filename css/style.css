@@ -1,56 +1,19 @@
-html,body,section,nav,hgroup{
-	margin:0;
-	padding:0;
-}
-body{
-	font-family:"Microsoft YaHei";
-	color:#666;
-}
-section,nav,hgroup{
-	display:block;
-}
-a{
-	text-decoration:none;
-}
-img{
-	vertical-align:middle;
-}
-
-.slide{
-	position:absolute;
-	left:50%;
-	top:50%;
-	margin-left:-600px;
-	margin-top:-250px;
-	width:1200px;
-	height:500px;
-	overflow:hidden;
-}
-.title{
-	width:1200px;
-	height:40px;
-	line-height:38px;
-	text-align:center;
-	border:1px solid #f8f8f8;
-	border-radius:2px;
-	box-sizing:border-box;
-}
-.title-item{
-	float:left;
-	width:25%;
-	font-size:22px;
-	color:#666;
-	cursor:pointer;
-}
-.current{
-	height:40px;
-	margin:-1px;
-	background:#fc0;
-	border-radius:3px;
-}
-.picture{
-	position:relative;
-}
-.picture img{
-	cursor:pointer;
-}
+/* normalize */
+html, body, section, nav, hgroup {margin: 0;padding: 0;}
+body {font-family: 'Microsoft YaHei', Arial, sans-serif;color: #666;}
+a {text-decoration: none;}
+img {vertical-align: middle;}
+/* H5新标签兼容性设置 */
+section, nav, hgroup {display: block;}
+/* 轮播图 */
+.slide {position: absolute;top: 50%;left: 50%;overflow: hidden;width: 1200px;height: 500px;margin-top: -250px;margin-left: -600px;}
+/* 切换项标题 */
+.title {line-height: 39px;width: 1198px;height: 39px;text-align: center;border: 1px solid #f8f8f8;border-bottom: none;border-radius: 2px;}
+.title span {font-family: 'Microsoft YaHei', sans-serif;font-size: 22px;font-weight: normal;float: left;width: 25%;cursor: pointer;color: #666;background: #fff;}
+/*效果图中似乎只有font-weight发生变化，
+但评分标准中注明字体发生变化，却未说明变化后的字体*/
+.title span.current {font-family: 'Times New Roman', serif;font-weight: bold;border-radius: 3px;background: #fc0;}
+/* 轮播图片 */
+.picture {position: relative;height: 460px;}
+.picture a {position: absolute;}
+.picture a:first-child {z-index: 1;}
