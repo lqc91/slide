@@ -1,19 +1,118 @@
 /* normalize */
-html, body, section, nav, hgroup {margin: 0;padding: 0;}
-body {font-family: 'Microsoft YaHei', Arial, sans-serif;color: #666;}
-a {text-decoration: none;}
-img {vertical-align: middle;}
+html,
+body,
+section,
+nav {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Microsoft YaHei', Arial, sans-serif;
+	color: #666;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
 /* H5新标签兼容性设置 */
-section, nav, hgroup {display: block;}
+section,
+nav {
+	display: block;
+}
+
 /* 轮播图 */
-.slide {position: absolute;top: 50%;left: 50%;overflow: hidden;width: 1200px;height: 500px;margin-top: -250px;margin-left: -600px;}
+.slide {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	width: 1200px;
+	height: 500px;
+	margin-top: -250px;
+	margin-left: -600px;
+}
+
 /* 切换项标题 */
-.title {line-height: 39px;width: 1198px;height: 39px;text-align: center;border: 1px solid #f8f8f8;border-bottom: none;border-radius: 2px;}
-.title span {font-family: 'Microsoft YaHei', sans-serif;font-size: 22px;font-weight: normal;float: left;width: 25%;cursor: pointer;color: #666;background: #fff;}
-/*效果图中似乎只有font-weight发生变化，
-但评分标准中注明字体发生变化，却未说明变化后的字体*/
-.title span.current {font-family: 'Times New Roman', serif;font-weight: bold;border-radius: 3px;background: #fc0;}
+.title {
+	line-height: 39px;
+	width: 1198px;
+	height: 39px;
+	text-align: center;
+	border: 1px solid #f8f8f8;
+	border-bottom: none;
+	border-radius: 2px;
+}
+
+.title span {
+	font-family: 'Microsoft YaHei', sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	color: #666;
+	background: #fff;
+}
+
+.title span.current {
+	font-family: 'Times New Roman', serif;
+	font-weight: bold;
+	border-radius: 3px;
+	background: #fc0;
+}
+
 /* 轮播图片 */
-.picture {position: relative;height: 460px;}
-.picture a {position: absolute;}
-.picture a:first-child {z-index: 1;}
+.picture {
+	position: relative;
+	height: 460px;
+}
+.picture .active,
+.picture .right-1,
+.picture .right-2,
+.picture .left {
+	position:absolute;
+	top:50%;
+	overflow:hidden;
+	box-shadow:0 0 2px 2px #ccc;
+}
+.picture .right-1,
+.picture .left {
+	width:60%;
+	height:400px;
+	margin-top:-200px;
+}
+.picture .active {
+	position:absolute;
+	left:10%;
+	width:70%;
+	height:450px;
+	/*transform:translateY(-225px);*/
+	margin-top:-225px;
+	z-index:3;
+}
+.picture .right-1 {
+	right:10%;
+	z-index:2;
+}
+.picture .right-2 {
+	right:0;
+	z-index:1;
+	width:50%;
+	height:350px;
+	margin-top:-175px;
+}
+.picture .left {
+	left:0;
+	z-index:0;
+}
+.picture img {
+	position:absolute;
+	height:100%;
+	left:-30%;
+}
